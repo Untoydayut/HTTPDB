@@ -2,10 +2,10 @@
   <thead>
     <tr>
       <th>
-        Student First Name
+        Fist Name
       </th>
       <th>
-        Student Last Name
+        Last Name
       </th>
     </tr>
   </thead>
@@ -13,6 +13,14 @@
     <tr *ngFor = "let person of peopleCollection">
       <td>{{ person.firstName }}</td>
       <td>{{ person.lastName }}</td>
+      <td>
+        <button (click)="modifyData(person.id)" class="btn btn-warning">
+           Edit 
+        </button>
+      </td>
+      <td>
+        <a href="https://firstproject-2358b.firebaseio.com/info/{{ person.id }}.json">Link</a>
+      </td>
     </tr> 
   </tbody>
 </table>

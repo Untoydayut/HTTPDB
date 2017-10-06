@@ -25,6 +25,8 @@ export class ListingComponent implements OnInit {
 
   peopleCollection: Array<IPerson> = [];
 
+  display = true;
+
   constructor(private dbservice: DbService) { }
 
   ngOnInit() {
@@ -40,12 +42,10 @@ export class ListingComponent implements OnInit {
        (error) => console.log(error)
      );
   }
-
-  modifyData(dataID) {
+    modifyData(dataID) {
     // console.log(dataID);
     this.modifyClicked.emit(dataID);
   }
-
 //-----------------------------------------------------
 
 

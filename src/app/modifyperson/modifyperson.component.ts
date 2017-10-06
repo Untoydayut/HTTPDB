@@ -18,6 +18,8 @@ export class ModifypersonComponent implements OnInit {
 
   person: object;
 
+  display: false;
+
   constructor(private dbService: DbService) { }
 
   ngOnInit() {

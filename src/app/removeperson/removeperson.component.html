@@ -2,10 +2,10 @@
   <thead>
     <tr>
       <th>
-        Student First Name
+        Fist Name
       </th>
       <th>
-        Student Last Name
+        Last Name
       </th>
     </tr>
   </thead>
@@ -14,8 +14,8 @@
       <td>{{ person.firstName }}</td>
       <td>{{ person.lastName }}</td>
       <td>
-        <button (click)="removeData(person)" class="btn btn-warning">
-           Remove 
+        <button (click)="removeData(person.id)" class="btn btn-warning">
+          Remove
         </button>
       </td>
     </tr> 

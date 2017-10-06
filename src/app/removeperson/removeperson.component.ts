@@ -9,7 +9,6 @@ import { IPerson } from '../interfaces/iperson';
   styleUrls: ['./removeperson.component.css']
 })
 export class RemovepersonComponent implements OnInit {
-@Output() modifyClicked = new EventEmitter<any>();
 
 baseURL = 'https://firstproject-2358b.firebaseio.com/';
 rootNode = 'info';
@@ -37,8 +36,12 @@ refID: any;
        (error) => console.log(error)
      );
   }
-  removeData(id){
-    this.dbService.deleteData(`${this.baseURL}/${this.rootNode}.json/id`).subscribe(
+  removeData(info: NgForm){
+    this.person = {
+      firstname: info.value.fname,
+      lastname: info.value.lname
+    }
+    this.dbService.deleteData(`${this.baseURL}/${this.rootNode}/${this.refID}.json`).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
     )
