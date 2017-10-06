@@ -36,11 +36,8 @@ refID: any;
        (error) => console.log(error)
      );
   }
-  removeData(info: NgForm){
-    this.person = {
-      firstname: info.value.fname,
-      lastname: info.value.lname
-    }
+  removeData(id){
+    this.refID = id; 
     this.dbService.deleteData(`${this.baseURL}/${this.rootNode}/${this.refID}.json`).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
