@@ -38,7 +38,7 @@ refID: any;
      );
   }
   removeData(id){
-    this.dbService.deleteData(`${this.baseURL}/${this.rootNode}.json`, this.refID).subscribe(
+    this.dbService.deleteData(`${this.baseURL}/${this.rootNode}.json/id`).subscribe(
       (response) => console.log(response),
       (error) => console.log(error)
     )
