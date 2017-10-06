@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        Student First Name
+      </th>
+      <th>
+        Student Last Name
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let person of peopleCollection">
+      <td>{{ person.firstName }}</td>
+      <td>{{ person.lastName }}</td>
+    </tr> 
+  </tbody>
+</table>

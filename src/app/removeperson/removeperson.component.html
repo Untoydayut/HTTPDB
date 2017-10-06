@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        Student First Name
+      </th>
+      <th>
+        Student Last Name
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let person of peopleCollection">
+      <td>{{ person.firstName }}</td>
+      <td>{{ person.lastName }}</td>
+      <td>
+        <button (click)="removeData(person)" class="btn btn-warning">
+           Remove 
+        </button>
+      </td>
+    </tr> 
+  </tbody>
+</table>
